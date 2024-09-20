@@ -20,6 +20,20 @@ class MyApp extends StatelessWidget {
   }
 }
 
+class InputSelection extends StatelessWidget {
+  const InputSelection({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return const TextField(
+      decoration: InputDecoration(
+        border: OutlineInputBorder(),
+        labelText: 'NIM',
+      ),
+    );
+  }
+}
+
 class MyHomePage extends StatefulWidget {
   const MyHomePage({Key? key, required this.title}) : super(key: key);
 
@@ -52,42 +66,55 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text(widget.title),
       ),
       body: Container(
-        padding: const EdgeInsets.all(16.0),
+        padding: const EdgeInsets.all(12.0),
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center, // Pusatkan isi
           children: [
-            MyLayout(),
-            const SizedBox(height: 20.0),
-            MyImageWidget(),
-            const SizedBox(height: 20.0),
-            MyTextWidget(),
-            const SizedBox(height: 20.0),
-            Text("${selectedDate.toLocal()}".split(' ')[0]),
-            const SizedBox(height: 20.0),
-            ElevatedButton(
-              onPressed: () => _selectDate(context),
-              child: const Text('Pilih Tanggal'),
+            Row(
+              children: [
+                MyLayout(),
+              ],
             ),
-            const SizedBox(height: 20.0),
-            const InputSelection(),
+            Expanded(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  SizedBox(
+                    height: 50.0,
+                  ),
+                  Center(
+                    child: Column(
+                      mainAxisSize: MainAxisSize.min,
+                      children: <Widget>[
+                        MyImageWidget(),
+                        SizedBox(
+                          height: 20.0,
+                        ),
+                        MyTextWidget(),
+                        Text("${selectedDate.toLocal()}".split(' ')[0]),
+                        const SizedBox(
+                          height: 20.0,
+                        ),
+                        ElevatedButton(
+                          onPressed: () {
+                            _selectDate(context);
+                            print(selectedDate.day +
+                                selectedDate.month +
+                                selectedDate.year);
+                          },
+                          child: const Text('Pilih Tanggal'),
+                        ),
+                        const SizedBox(height: 20.0),
+                        const InputSelection(),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ),
           ],
         ),
       ),
       floatingActionButton: FabWidget(),
-    );
-  }
-}
-
-class InputSelection extends StatelessWidget {
-  const InputSelection({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return const TextField(
-      decoration: InputDecoration(
-        border: OutlineInputBorder(),
-        labelText: 'NIM',
-      ),
     );
   }
 }
