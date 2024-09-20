@@ -4,7 +4,7 @@ import 'package:hello_world/basic_widgets/loading_cupertino.dart';
 import 'basic_widgets/text_widget.dart';
 import 'basic_widgets/image_widget.dart';
 import 'basic_widgets/input_dan_selection.dart';
-import 'basic_widgets/layout.dart';
+import 'basic_widgets/dialog_widget.dart';
 
 void main() => runApp(const MyApp());
 
@@ -30,12 +30,9 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  // Variable/State untuk mengambil tanggal
   DateTime selectedDate = DateTime.now();
 
-  //  Initial SelectDate FLutter
   Future<void> _selectDate(BuildContext context) async {
-    // Initial DateTime FIinal Picked
     final DateTime? picked = await showDatePicker(
         context: context,
         initialDate: selectedDate,
@@ -55,53 +52,42 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text(widget.title),
       ),
       body: Container(
-        child: Expanded(
-          child: Column(
-            children: [
-              Row(
-                children: [
-                  MyLayout(),
-                ],
-              ),
-              Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  SizedBox(
-                    height: 50.0,
-                  ),
-                  Center(
-                    child: Column(
-                      mainAxisSize: MainAxisSize.min,
-                      children: <Widget>[
-                        MyImageWidget(),
-                        SizedBox(
-                          height: 20.0,
-                        ),
-                        MyTextWidget(),
-                        Text("${selectedDate.toLocal()}".split(' ')[0]),
-                        const SizedBox(
-                          height: 20.0,
-                        ),
-                        ElevatedButton(
-                          onPressed: () => {
-                            _selectDate(context),
-                            // ignore: avoid_print
-                            print(selectedDate.day +
-                                selectedDate.month +
-                                selectedDate.year)
-                          },
-                          child: const Text('Pilih Tanggal'),
-                        ),
-                      ],
-                    ),
-                  ),
-                ],
-              ),
-            ],
-          ),
+        padding: const EdgeInsets.all(16.0),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center, // Pusatkan isi
+          children: [
+            MyLayout(),
+            const SizedBox(height: 20.0),
+            MyImageWidget(),
+            const SizedBox(height: 20.0),
+            MyTextWidget(),
+            const SizedBox(height: 20.0),
+            Text("${selectedDate.toLocal()}".split(' ')[0]),
+            const SizedBox(height: 20.0),
+            ElevatedButton(
+              onPressed: () => _selectDate(context),
+              child: const Text('Pilih Tanggal'),
+            ),
+            const SizedBox(height: 20.0),
+            const InputSelection(),
+          ],
         ),
       ),
       floatingActionButton: FabWidget(),
+    );
+  }
+}
+
+class InputSelection extends StatelessWidget {
+  const InputSelection({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return const TextField(
+      decoration: InputDecoration(
+        border: OutlineInputBorder(),
+        labelText: 'NIM',
+      ),
     );
   }
 }
