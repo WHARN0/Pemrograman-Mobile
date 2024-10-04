@@ -8,6 +8,12 @@ Hasil Langkah 1-7
 
 Hasil Tugas 2 No. 1-5
 ![Screenshot Hasil Tugas 2 No 1 Sampai 5](images/Tugas.png)
+
+Item Page Sugar
 ![Screenshot Item Page Sugar](images/ItemSugar.png)
+
+Item Page Salt
 ![Screenshot Item Page Salt](images/ItemSalt.png)
+
+Item Page KTM
 ![Screenshot Item Page KTM](images/ItemKTM.png)
