@@ -1,4 +1,4 @@
-# Praktikum 7 Layout dan Navigasi
+# Jobsheet 7 Layout dan Navigasi
 
 Nama : Bagus Arnovario Wibowo
 NIM : 2241720225
