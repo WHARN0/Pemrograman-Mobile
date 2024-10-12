@@ -1,6 +1,6 @@
 # Jobsheet 8 Manajemen Plugin
 
-Nama : Bagus Arnovario Wibowo
+Nama : Bagus Arnovario Wibowo<br/>
 NIM : 2241720225
 
 Langkah Praktikum 4
