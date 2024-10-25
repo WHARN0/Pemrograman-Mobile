@@ -1,8 +1,6 @@
-# hello_world
+# Jobsheet 5 Aplikasi Pertama dan Widget Dasar Flutter
 
-A new Flutter project.
-
-Nama : Bagus Arnovario Wibowo
+Nama : Bagus Arnovario Wibowo<br/>
 NIM : 2241720225
 
 Praktikum 1
