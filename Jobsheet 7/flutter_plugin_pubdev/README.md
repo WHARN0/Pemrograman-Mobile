@@ -1,4 +1,4 @@
-# Jobsheet 8 Manajemen Plugin
+# Jobsheet 7 Manajemen Plugin
 
 Nama : Bagus Arnovario Wibowo<br/>
 NIM : 2241720225
