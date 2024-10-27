@@ -1,7 +1,6 @@
 import 'package:master_plan/provider/plan_provider.dart';
 import '../models/data_layer.dart';
 import 'package:flutter/material.dart';
-import '../provider/plan_provider.dart';
 
 class PlanScreen extends StatefulWidget {
   final Plan plan;
