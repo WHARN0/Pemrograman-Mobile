@@ -1,8 +1,6 @@
-# hello_world
+# Jobsheet 5 Aplikasi Pertama dan Widget Dasar Flutter
 
-A new Flutter project.
-
-Nama : Bagus Arnovario Wibowo
+Nama : Bagus Arnovario Wibowo<br/>
 NIM : 2241720225
 
 Praktikum 1
@@ -33,5 +31,4 @@ Praktikum 4 Langkah 6
 ![Screenshot praktikum 4 langkah 6](images/Praktikum_4_Langkah_6.png)
 
 Tugas Praktikum
-Pada praktikum 4 mulai dari Langkah 3 sampai 6, buatlah file widget tersendiri di folder basic_widgets, kemudian pada file main.dart cukup melakukan import widget sesuai masing-masing langkah tersebut!
 ![Screenshot tugas praktikum](images/Tugas.png)

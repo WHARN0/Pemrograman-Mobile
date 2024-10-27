@@ -1,6 +1,6 @@
-# Jobsheet 7 Praktikum 5
+# Jobsheet 6 Praktikum 5
 
-Nama : Bagus Arnovario Wibowo
+Nama : Bagus Arnovario Wibowo<br/>
 NIM : 2241720225
 
 Hasil Langkah 1-7
