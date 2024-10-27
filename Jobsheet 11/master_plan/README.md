@@ -19,12 +19,12 @@ Hasil Praktikum 1 Langkah 10-14<br/>
 Scroll Controller berfungsi agar user dapat menscroll list dari task yang ada jika jumlahnya terlalu banyak untuk ditampilkan, terutama untuk pengguna ios yang dimana ketika user menscroll maka keyboard akan otomatis menghilang ini mencegah masalah dimana TextField yang berada di bagian bawah layar tertutupi keyboard.<br/>
 
 Hasil Praktikum 1 Dasar State dengan Model-View<br/>
-![Gif Hasil Praktikum 1](images/gif/Hasil_Praktikum_1.gif)<br/>
+[Gif Hasil Praktikum 1](images/gif/Hasil_Praktikum_1.gif)<br/>
 
 Hasil Praktikum 2 Mengelola Data Layer dengan InheritedWidget dan InheritedNotifier<br/>
-![Gif Hasil Praktikum 2](images/gif/Hasil_Praktikum_2.gif)<br/>
+[Gif Hasil Praktikum 2](images/gif/Hasil_Praktikum_2.gif)<br/>
 Memisahkan view dan model, memanajemen state menggunakan InheritedNotifier, yang memungkinkan pembaruan data secara otomatis dan efisien. Pemanfaatan PlanProvider memungkinkan aplikasi untuk menambahkan, mengedit, dan menandai tugas selesai, serta menampilkan progressnya secara langsung.<br/>
 
 Hasil Praktikum 3 Membuat State di Multiple Screens<br/>
-![Gif Hasil Praktikum 3](images/gif/Hasil_Praktikum_3.gif)<br/>
+[Gif Hasil Praktikum 3](images/gif/Hasil_Praktikum_3.gif)<br/>
 Pada tampilan utama (PlanCreatorScreen) akan terlihat daftar rencana yang telah dibuat oleh user, setiap rencana ditampilkan dalam bentuk ListTile dengan nama rencana dan jumlah tasks yang telah selesai merupakan hasil dari method completenessMessage pada objek Plan. Terdapat kotak untuk menginput nama rencana pada tampilan utama, user diharapkan untuk menekan enter setelah mengetikkan nama rencana pada kotak input, setelah menekan enter maka rencana yang baru saja dibuat akan muncul pada daftar rencana di tampilan utama dibawah kotak input. Di dalam rencana yang dibuat, user dapat menambahkan tasks dan dikelola di PlanScreen. User bisa menandai tasks sebagai selesai dengan mencentang kotak pada sebelah kiri deskripsi tasks, dan user dapat mengubah deskripsi tasks, aktivitas ini memanfaatkan ValueNotifier untuk memperbarui data rencana secara otomatis di seluruh UI. Setiap daftar rencana dapat ditekan sehingga membuka tampilan dari PlanScreen yang berisikan deksripsi tasks dalam rencana tersebut. PlanProvider menggunakan InheritedNotifier untuk berbagi dan memantau data yang dikelola oleh ValueNotifierListPlan. Hal ini memungkinkan keseluruhan aplikasi menerima notifikasi pembaruan rencana secara efisien setiap adanya perubahan, semisal ketika rencana atau tugas baru ditambahkan, diedit, atau bahkan ditandai sebagai selesai.<br/>
