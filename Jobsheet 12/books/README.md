@@ -45,3 +45,8 @@ Hasil Praktikum 8 Navigation route dengan Future Function<br/>
 Hasil Praktikum 8 (Soal 16)<br/>
 ![Screenshot Hasil Praktikum 8 Soal (16)](images/Gif_Hasil_Akhir_P8.gif)<br/>
 
+Hasil Praktikum 9 Memanfaatkan async/await dengan Widget Dialog<br/>
+![Screenshot Hasil Praktikum 9](images/Gif_Hasil_Awal_P9.gif)<br/>
+
+Hasil Praktikum 9 (Soal 17)<br/>
+![Screenshot Hasil Praktikum 9 Soal (17)](images/Gif_Hasil_Akhir_P9.gif)<br/>
