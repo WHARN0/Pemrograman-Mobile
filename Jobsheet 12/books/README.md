@@ -27,6 +27,10 @@ Hasil Praktikum 4 Memanggil Future secara paralel<br/>
 Hasil Langkah 3 Praktikum 5 (Soal 9)<br/>
 ![Screenshot Hasil Langkah 3 Praktikum 5](images/Gif_Langkah_3_P5.gif)<br/>
 
-Hasil Praktikum 5 Menangani Respon Error pada Async Code (Soal 10)
+Hasil Praktikum 5 Menangani Respon Error pada Async Code (Soal 10)<br/>
 ![Screenshot Hasil Praktikum 5](images/Gif_Hasil_P5.gif)<br/>
 
+Hasil Praktikum 6 Menggunakan Future dengan StatefulWidget (Soal 12)<br/>
+![Screenshot Hasil Praktikum 6](images/Gif_Hasil_P6.gif)<br/>
+
+Hasil 
