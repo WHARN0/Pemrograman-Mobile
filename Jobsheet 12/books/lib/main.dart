@@ -36,7 +36,7 @@ class _FuturePageState extends State<FuturePage> {
   Future<Response> getData() async {
     const authority = 'www.googleapis.com';
     const path = '/books/v1/volumes/qCLFw5injs8C';
-    Uri url = Uri.http(authority, path);
+    Uri url = Uri.https(authority, path);
     return http.get(url);
   }
 
@@ -52,7 +52,16 @@ class _FuturePageState extends State<FuturePage> {
             const Spacer(),
             ElevatedButton(
               child: const Text('GO!'),
-              onPressed: () {},
+              onPressed: () {
+                setState(() {});
+                getData().then((value) {
+                  result = value.body.toString().substring(0, 450);
+                  setState(() {});
+                }).catchError((_) {
+                  result = 'An error occured';
+                  setState(() {});
+                });
+              },
             ),
             const Spacer(),
             Text(result),
