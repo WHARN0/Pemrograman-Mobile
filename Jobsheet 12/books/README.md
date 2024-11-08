@@ -15,7 +15,12 @@ Hasil Praktikum 2 Menggunakan await/async untuk menghindari callbacks (Soal 4)<b
 Hasil Langkah 4 Praktikum 3 (Soal 5)<br/>
 ![Screenshot Hasil Langkah 4 Praktikum 3](images/Gif_Langkah_4_P2.gif)<br/>
 
-Hasil Praktikum 3 (Soal 6)<br/>
+Hasil Praktikum 3 Menggunakan Completer di Future (Soal 6)<br/>
 ![Screenshot Hasil Praktikum 3](images/Gif_Langkah_4_P2.gif)<br/>
 
-Hasil 
+Hasil Langkah 3 Praktikum 4 (Soal 7)<br/>
+![Screenshot Hasil Langkah 3 Praktikum 4](images/Gif_Langkah_3_P4.gif)<br/>
+
+Hasil Praktikum 4 Memanggil Future secara paralel<br/>
+![Screenshot Hasil Praktikum 4](images/Gif_Langkah_3_P4.gif)<br/>
+
