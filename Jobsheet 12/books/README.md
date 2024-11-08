@@ -33,4 +33,9 @@ Hasil Praktikum 5 Menangani Respon Error pada Async Code (Soal 10)<br/>
 Hasil Praktikum 6 Menggunakan Future dengan StatefulWidget (Soal 12)<br/>
 ![Screenshot Hasil Praktikum 6](images/Gif_Hasil_P6.gif)<br/>
 
-Hasil 
+Hasil Langkah 4 Praktikum 7 (Soal 13)<br/>
+![Screenshot Hasil Langkah 4 Praktikum 7](images/Gif_Langkah_4_P7.gif)<br/>
+
+Hasil Praktikum 7 Manajemen Future dengan FutureBuilder (Soal 14)<br/>
+![Screenshot Hasil Praktikum 7](images/Gif_Hasil_P7.gif)<br/>
+
