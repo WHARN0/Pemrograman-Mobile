@@ -39,3 +39,9 @@ Hasil Langkah 4 Praktikum 7 (Soal 13)<br/>
 Hasil Praktikum 7 Manajemen Future dengan FutureBuilder (Soal 14)<br/>
 ![Screenshot Hasil Praktikum 7](images/Gif_Hasil_P7.gif)<br/>
 
+Hasil Praktikum 8 Navigation route dengan Future Function<br/>
+![Screenshot Hasil Praktikum 8](images/Gif_Hasil_Awal_P8.gif)<br/>
+
+Hasil Praktikum 8 (Soal 16)<br/>
+![Screenshot Hasil Praktikum 8 Soal (16)](images/Gif_Hasil_Akhir_P8.gif)<br/>
+
