@@ -35,6 +35,23 @@ class _FuturePageState extends State<FuturePage> {
   String result = '';
   late Completer completer;
 
+  Future handleError() async {
+    try {
+      await returnError();
+    } catch (error) {
+      setState(() {
+        result = error.toString();
+      });
+    } finally {
+      print('Complete');
+    }
+  }
+
+  Future returnError() async {
+    await Future.delayed(const Duration(seconds: 2));
+    throw Exception('Something terrible happened!');
+  }
+
   // void returnFG() {
   //   FutureGroup<int> futureGroup = FutureGroup<int>();
   //   futureGroup.add(returnOneAsync());
@@ -164,8 +181,30 @@ class _FuturePageState extends State<FuturePage> {
               //     result = 'An error occurred';
               //   });
               // },
+              // onPressed: () {
+              //   returnFG();
+              // },
+              // onPressed: () {
+              // returnError().then((value) {
+              //   setState(() {
+              //     result = 'Success';
+              //   });
+              // }).catchError((onError) {
+              //   setState(() {
+              //     result = onError.toString();
+              //   });
+              // }).whenComplete(() => print('Complete'));
+              // },
               onPressed: () {
-                returnFG();
+                handleError().then((value) {
+                  setState(() {
+                    result = 'Success';
+                  });
+                }).catchError((onError) {
+                  setState(() {
+                    result = onError.toString();
+                  });
+                }).whenComplete(() => print('Complete'));
               },
             ),
             const Spacer(),

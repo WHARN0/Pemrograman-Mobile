@@ -24,3 +24,9 @@ Hasil Langkah 3 Praktikum 4 (Soal 7)<br/>
 Hasil Praktikum 4 Memanggil Future secara paralel<br/>
 ![Screenshot Hasil Praktikum 4](images/Gif_Langkah_3_P4.gif)<br/>
 
+Hasil Langkah 3 Praktikum 5 (Soal 9)<br/>
+![Screenshot Hasil Langkah 3 Praktikum 5](images/Gif_Langkah_3_P5.gif)<br/>
+
+Hasil Praktikum 5 Menangani Respon Error pada Async Code (Soal 10)
+![Screenshot Hasil Praktikum 5](images/Gif_Hasil_P5.gif)<br/>
+
