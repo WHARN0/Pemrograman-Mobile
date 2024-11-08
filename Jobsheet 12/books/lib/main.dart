@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'dart:async';
 import 'package:http/http.dart';
 import 'package:http/http.dart' as http;
+import 'package:async/async.dart';
 
 void main() {
   runApp(const MyApp());
@@ -32,6 +33,43 @@ class FuturePage extends StatefulWidget {
 
 class _FuturePageState extends State<FuturePage> {
   String result = '';
+  late Completer completer;
+
+  Future getNumber() {
+    completer = Completer<int>();
+    calculate();
+    return completer.future;
+  }
+
+  Future calculate() async {
+    await Future.delayed(const Duration(seconds: 5));
+    completer.complete(42);
+  }
+
+  Future<int> returnOneAsync() async {
+    await Future.delayed(const Duration(seconds: 3));
+    return 1;
+  }
+
+  Future<int> returnTwoAsync() async {
+    await Future.delayed(const Duration(seconds: 3));
+    return 2;
+  }
+
+  Future<int> returnThreeAsync() async {
+    await Future.delayed(const Duration(seconds: 3));
+    return 3;
+  }
+
+  Future count() async {
+    int total = 0;
+    total = await returnOneAsync();
+    total += await returnTwoAsync();
+    total += await returnThreeAsync();
+    setState(() {
+      result = total.toString();
+    });
+  }
 
   Future<Response> getData() async {
     const authority = 'www.googleapis.com';
@@ -52,15 +90,25 @@ class _FuturePageState extends State<FuturePage> {
             const Spacer(),
             ElevatedButton(
               child: const Text('GO!'),
+              // onPressed: () {
+              //   setState(() {});
+              //   getData().then((value) {
+              //     result = value.body.toString().substring(0, 450);
+              //     setState(() {});
+              //   }).catchError((_) {
+              //     result = 'An error occured';
+              //     setState(() {});
+              //   });
+              // },
+              // onPressed: () {
+              //   count();
+              // },
               onPressed: () {
-                setState(() {});
-                getData().then((value) {
-                  result = value.body.toString().substring(0, 450);
-                  setState(() {});
-                }).catchError((_) {
-                  result = 'An error occured';
-                  setState(() {});
-                });
+                getNumber().then((value) {
+                  setState(() {
+                    result = value.toString();
+                  });
+                }); 
               },
             ),
             const Spacer(),
