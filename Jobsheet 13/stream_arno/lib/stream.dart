@@ -20,7 +20,7 @@ class ColorStream {
       int index = t % colors.length;
       return colors[index];
     });
-  } 
+  }
 }
 
 class NumberStream {
@@ -32,5 +32,9 @@ class NumberStream {
 
   close() {
     controller.close();
+  }
+
+  addError() {
+    controller.sink.addError('error');
   }
 }
