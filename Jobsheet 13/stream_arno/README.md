@@ -16,7 +16,7 @@ Soal 3 Praktikum 1<br/>
 Soal 4 Praktikum 1<br/>
 ![Screenshot Soal 4 Praktikum 1](images/Gif_Soal4_P1.gif)<br/>
 
-Hasil Praktikum 3 Menggunakan Completer di Future (Soal6)<br/>
+Hasil Praktikum 3 Menggunakan Completer di Future (Soal 6)<br/>
 ![Screenshot Hasil Praktikum 3](images/Gif_Langkah_4_P2.gif)<br/>
 
 Hasil Langkah 3 Praktikum 4 (Soal 7)<br/>
