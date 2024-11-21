@@ -26,3 +26,6 @@ Hasil Praktikum 2 Stream Controllers dan Sinks (Soal 7)<br/>
 
 Hasil Praktikum 3 Injeksi data ke streams (Soal 8)<br/>
 ![Screenshot Hasil Praktikum 3 (Soal 8)](images/Gif_Soal8_P3.gif)<br/>
+
+Hasil Praktikum 4 Subscribe ke stream events (Soal 9)<br/>
+![Screenshot Hasil Praktikum 4 (Soal 9)](images/Gif_Soal9_P4.gif)<br/>
