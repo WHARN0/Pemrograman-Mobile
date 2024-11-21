@@ -29,3 +29,9 @@ Hasil Praktikum 3 Injeksi data ke streams (Soal 8)<br/>
 
 Hasil Praktikum 4 Subscribe ke stream events (Soal 9)<br/>
 ![Screenshot Hasil Praktikum 4 (Soal 9)](images/Gif_Soal9_P4.gif)<br/>
+
+Soal 10 Praktikum 5<br/>
+![Screenshot Soal 10 Praktikum 5](images/Screenshot_Soal10_P5.png)<br/>
+
+Hasil Praktikum 5 Multiple stream subscriptions (Soal 11)<br/>
+![Screenshot Hasil Praktikum 5 (Soal 11)](images/Gif_Soal11_P5.gif)<br/>
