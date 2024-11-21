@@ -1,6 +1,6 @@
 # Jobsheet 12 Lanjutan State Management dengan Streams
 
-Nama: Bagus Arnovario Wibowo
+Nama: Bagus Arnovario Wibowo<br/>
 NIM : 2241720225
 
 Soal 1 Praktikum 1<br/>
