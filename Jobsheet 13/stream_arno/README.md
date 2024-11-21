@@ -18,9 +18,11 @@ Soal 4 Praktikum 1<br/>
 Hasil Praktikum 1 Dart Streams (Soal 5)<br/>
 ![Screenshot Hasil Praktikum 1 (Soal 5)](images/Gif_Soal5_P1.gif)<br/>
 
-Soal 6 Praktikum 2
+Soal 6 Praktikum 2<br/>
 ![Screenshot Soal 6 Praktikum 2](images/Gif_Soal6_P2.gif)<br/>
 
-Hasil Praktikum 2 Stream Controllers dan Sinks (Soal 7)
+Hasil Praktikum 2 Stream Controllers dan Sinks (Soal 7)<br/>
 ![Screenshot Hasil Praktikum 2 (Soal 7)](images/Gif_Soal7_P2.gif)<br/>
 
+Hasil Praktikum 3 Injeksi data ke streams (Soal 8)<br/>
+![Screenshot Hasil Praktikum 3 (Soal 8)](images/Gif_Soal8_P3.gif)<br/>
