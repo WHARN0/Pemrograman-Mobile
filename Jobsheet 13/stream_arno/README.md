@@ -39,3 +39,5 @@ Hasil Praktikum 5 Multiple stream subscriptions (Soal 11)<br/>
 Hasil Praktikum 6 StreamBuilder (Soal 12)<br/>
 ![Screenshot Hasil Praktikum 6 (Soal 12)](images/Gif_Soal12_P6.gif)<br/>
 
+Hasil Praktikum 7 BLoC Pattern (Soal 13)<br/>
+![Screenshot Hasil Praktikum 7 (Soal 13)](images/Gif_Soal13_P7.gif)<br/>

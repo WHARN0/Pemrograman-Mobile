@@ -3,14 +3,15 @@ import 'package:flutter/material.dart';
 import 'dart:async';
 import 'dart:math';
 // import 'numberStream.dart';
+import 'random_screen.dart';
 
 void main() {
   runApp(const MyApp());
 }
 
-class NumberStream{
+class NumberStream {
   Stream<int> getNumbers() async* {
-    yield* Stream.periodic(const Duration(seconds: 1), (int t){
+    yield* Stream.periodic(const Duration(seconds: 1), (int t) {
       Random random = Random();
       int myNum = random.nextInt(10);
       return myNum;
@@ -28,7 +29,8 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.deepOrange,
       ),
-      home: const StreamHomePage(),
+      // home: const StreamHomePage(),
+      home: const RandomScreen(),
     );
   }
 }
