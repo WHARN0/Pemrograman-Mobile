@@ -35,3 +35,7 @@ Soal 10 Praktikum 5<br/>
 
 Hasil Praktikum 5 Multiple stream subscriptions (Soal 11)<br/>
 ![Screenshot Hasil Praktikum 5 (Soal 11)](images/Gif_Soal11_P5.gif)<br/>
+
+Hasil Praktikum 6 StreamBuilder (Soal 12)<br/>
+![Screenshot Hasil Praktikum 6 (Soal 12)](images/Gif_Soal12_P6.gif)<br/>
+
