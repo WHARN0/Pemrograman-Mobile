@@ -6,6 +6,7 @@ import 'dart:async';
 import 'package:http/http.dart';
 import 'package:http/http.dart' as http;
 import 'package:async/async.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 void main() {
   runApp(const MyApp());
@@ -22,10 +23,10 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      // home: const FuturePage(),
+      home: const FuturePage(),
       // home: LocationScreen(),
       // home: const NavigationFirst(),
-      home: const NavigationDialogScreen(),
+      // home: const NavigationDialogScreen(),
     );
   }
 }
@@ -38,8 +39,33 @@ class FuturePage extends StatefulWidget {
 }
 
 class _FuturePageState extends State<FuturePage> {
+  int appCounter = 0;
   String result = '';
   late Completer completer;
+
+  @override
+  void initState() {
+    super.initState();
+    readAndWritePreference();
+  }
+
+  Future readAndWritePreference() async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    appCounter = prefs.getInt('appCounter') ?? 0;
+    appCounter++;
+    await prefs.setInt('appCounter', appCounter);
+    setState(() {
+      appCounter = appCounter;
+    });
+  }
+
+  Future deletePreference() async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    await prefs.clear();
+    setState(() {
+      appCounter = 0;
+    });
+  }
 
   Future handleError() async {
     try {
@@ -152,12 +178,20 @@ class _FuturePageState extends State<FuturePage> {
       appBar: AppBar(
         title: const Text('Back from the Future'),
       ),
-      body: Center(
+      // body: Center(
+      body: Container(
+          child: Center(
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
+            Text('You have opened the app $appCounter times.'),
             const Spacer(),
             ElevatedButton(
-              child: const Text('GO!'),
+              onPressed: () {
+                deletePreference();
+              },
+              child: Text('Reset counter'),
+              // child: const Text('GO!'),
               // onPressed: () {
               //   setState(() {});
               //   getData().then((value) {
@@ -201,26 +235,26 @@ class _FuturePageState extends State<FuturePage> {
               //   });
               // }).whenComplete(() => print('Complete'));
               // },
-              onPressed: () {
-                handleError().then((value) {
-                  setState(() {
-                    result = 'Success';
-                  });
-                }).catchError((onError) {
-                  setState(() {
-                    result = onError.toString();
-                  });
-                }).whenComplete(() => print('Complete'));
-              },
+              // onPressed: () {
+              //   handleError().then((value) {
+              //     setState(() {
+              //       result = 'Success';
+              //     });
+              //   }).catchError((onError) {
+              //     setState(() {
+              //       result = onError.toString();
+              //     });
+              //   }).whenComplete(() => print('Complete'));
+              // },
             ),
-            const Spacer(),
-            Text(result),
-            const Spacer(),
-            const CircularProgressIndicator(),
-            const Spacer(),
+            // const Spacer(),
+            // Text(result),
+            // const Spacer(),
+            // const CircularProgressIndicator(),
+            // const Spacer(),
           ],
         ),
-      ),
+      )),
     );
   }
 }
