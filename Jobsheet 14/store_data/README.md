@@ -13,7 +13,7 @@ Hasil Praktikum 3 Saving data simply with SharedPreferences<br/>
 ![Screenshot Hasil Praktikum 3](images/Gif_P3.gif)<br/>
 
 Hasil Praktikum 4 Accessing the filesystem, part 1: path_provider<br/>
-![Screenshot Hasil Praktikum 4](images/Gif_P4.gif)<br/>
+![Screenshot Hasil Praktikum 4](images/Screenshot_P4.png)<br/>
 
 Hasil Praktikum 5 Accessing the filesystem, part 2: Working with directories<br/>
 ![Screenshot Hasil Praktikum 5](images/Gif_P5.gif)<br/>
