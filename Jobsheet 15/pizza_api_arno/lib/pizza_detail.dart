@@ -3,7 +3,10 @@ import 'pizza.dart';
 import 'httphelper.dart';
 
 class PizzaDetailScreen extends StatefulWidget {
-  const PizzaDetailScreen({super.key});
+  final Pizza pizza;
+  final bool isNew;
+  const PizzaDetailScreen(
+      {super.key, required this.pizza, required this.isNew});
 
   @override
   State<PizzaDetailScreen> createState() => _PizzaDetailScreenState();
@@ -18,9 +21,28 @@ class _PizzaDetailScreenState extends State<PizzaDetailScreen> {
   String operationResult = '';
 
   @override
+  void initState() {
+    if (!widget.isNew) {
+      txtId.text = widget.pizza.id.toString();
+      txtName.text = widget.pizza.pizzaName;
+      txtDescription.text = widget.pizza.description;
+      txtPrice.text = widget.pizza.price.toString();
+      txtImageUrl.text = widget.pizza.imageUrl;
+    }
+    super.initState();
+  }
+
+  Future savePizza() async {
+    final result = await (widget.isNew ? await postPizza() : await putPizza());
+    setState(() {
+      operationResult = result;
+    });
+  }
+
+  @override
   Widget build(BuildContext context) {
     // return const Placeholder();
-        return Scaffold(
+    return Scaffold(
         appBar: AppBar(
           title: const Text('Pizza Detail'),
         ),
@@ -60,7 +82,8 @@ class _PizzaDetailScreenState extends State<PizzaDetailScreen> {
                 ElevatedButton(
                     child: const Text('Send Post'),
                     onPressed: () {
-                      postPizza();
+                      // postPizza();
+                      savePizza();
                     })
               ]),
             )));
@@ -86,6 +109,21 @@ class _PizzaDetailScreenState extends State<PizzaDetailScreen> {
       imageUrl: txtImageUrl.text,
     );
     String result = await helper.postPizza(pizza);
+    setState(() {
+      operationResult = result;
+    });
+  }
+
+  Future putPizza() async {
+    Httphelper helper = Httphelper();
+    Pizza pizza = Pizza(
+      id: int.tryParse(txtId.text) ?? 0,
+      pizzaName: txtName.text,
+      description: txtDescription.text,
+      price: double.tryParse(txtPrice.text) ?? 0.0,
+      imageUrl: txtImageUrl.text,
+    );
+    String result = await helper.putPizza(pizza);
     setState(() {
       operationResult = result;
     });

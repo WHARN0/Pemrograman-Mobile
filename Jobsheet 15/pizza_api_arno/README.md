@@ -10,7 +10,7 @@ Hasil Praktikum 2 POST-ing data<br/>
 ![Screenshot Hasil Praktikum 2](images/Gif_P2.gif)<br/>
 
 Hasil Praktikum 3 PUT-ting data<br/>
-![Screenshot Hasil Praktikum 3](images/Screenshot_P3.png)<br/>
+![Screenshot Hasil Praktikum 3](images/Gif_P3.gif)<br/>
 
 Hasil Praktikum 4 DELETE-ing data<br/>
-![Screenshot Hasil Praktikum 4](images/Screenshot_P4.png)<br/>
+![Screenshot Hasil Praktikum 4](images/Gif_P4.gif)<br/>
