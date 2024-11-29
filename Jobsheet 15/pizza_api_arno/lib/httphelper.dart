@@ -5,7 +5,7 @@ import 'pizza.dart';
 
 class Httphelper {
   final String authority = 'yld8g.wiremockapi.cloud';
-  final String path = 'pizzalist';
+  final String path = '/pizzalist';
 
   Future<List<Pizza>> getPizzaList() async {
     final Uri url = Uri.https(authority, path);
@@ -19,5 +19,16 @@ class Httphelper {
     } else {
       return [];
     }
+  }
+
+  Future<String> postPizza(Pizza pizza) async {
+    const postPath = '/pizza';
+    String post = json.encode(pizza.toJson());
+    Uri url = Uri.https(authority, postPath);
+    http.Response r = await http.post(
+      url,
+      body: post,
+    );
+    return r.body;
   }
 }

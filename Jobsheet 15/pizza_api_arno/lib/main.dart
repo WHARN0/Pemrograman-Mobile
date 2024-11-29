@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:pizza_api_arno/httphelper.dart';
-import 'package:pizza_api_arno/pizza.dart';
+import 'httphelper.dart';
+import 'pizza.dart';
+import 'pizza_detail.dart';
 
 void main() {
   runApp(const MyApp());
@@ -32,7 +33,6 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-
   Future<List<Pizza>> callPizzas() async {
     Httphelper helper = Httphelper();
     List<Pizza> pizzas = await helper.getPizzaList();
@@ -57,12 +57,20 @@ class _MyHomePageState extends State<MyHomePage> {
                 itemBuilder: (BuildContext context, int position) {
                   return ListTile(
                     title: Text(snapshot.data![position].pizzaName),
-                    subtitle: Text(snapshot.data![position].description +
-                        ' - € ' +
-                        snapshot.data![position].price.toString()),
+                    subtitle: Text(
+                        '${snapshot.data![position].description} - € ${snapshot.data![position].price}'),
                   );
                 });
           }),
+      floatingActionButton: FloatingActionButton(
+        child: const Icon(Icons.add),
+        onPressed: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => const PizzaDetailScreen()),
+          );
+        },
+      ),
     );
   }
 }
